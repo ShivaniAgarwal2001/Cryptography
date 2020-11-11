@@ -33,15 +33,15 @@ function caesarDecrypt(message) {
 
 function copyOne() {
 const enStr = document.getElementById("encrypted-message");
-enStr.focus(); // mdn uses so we use
+enStr.focus(); 
 enStr.select(); // to copy you need to select first
 document.execCommand("copy");
 }
 
 function copyTwo() {
 const enStr = document.getElementById("decrypted-plain-text");
-enStr.focus(); // mdn uses so we use
-enStr.select(); // to copy you need to select first
+enStr.focus(); 
+enStr.select(); 
 document.execCommand("copy");
 }
 
