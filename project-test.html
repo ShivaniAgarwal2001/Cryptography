@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Encrypt Text</title>
+    <link rel="stylesheet" href="page_style.css">
+    <link rel="stylesheet" type="text/css" href="./project-style.css">
+</head>
+
+<body>
+    <div id="flex">
+        <label>Write message here:</label>
+        <input id="plain-text" type=" text" name="message">
+
+        <button onclick="encrypt()">Encrpyt</button>
+        <br>
+
+        <label>Encrypted message</label>
+        <input id="encrypted-message" type="text" name="encryptor" readonly="readonly">
+        <button onclick="copyOne()">Copy</button>
+        <br>
+
+        <label>Decrypt here</label>
+        <input id="encrypted-text" type="text" name="encrypted">
+        <button onclick="decrypt()">Decrypt</button>
+        <br>
+
+        <label>Decrypted message</label>
+        <input id="decrypted-plain-text" type="text" readonly="readonly" name="decrypted">
+        <button onclick="copyTwo()">Copy</button>
+    </div>
+    <script type="text/javascript" src="./crypto-test.js"></script>
+    <!-- <div class="container">
+    </div> -->
+</body>
+
+</html>
