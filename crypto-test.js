@@ -13,10 +13,10 @@ function caesarEncrypt(message) {
 	var num = [];
 		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
 			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) + 1 - 97)% 26 + 97;
+			num[i] = (message.charCodeAt(i) + 13 - 97)% 26 + 97;
 		else if (message.charCodeAt(i) >=65 && message.charCodeAt(i) <=90)
 			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) + 1 - 65)% 26 + 65;
+			num[i] = (message.charCodeAt(i) + 13 - 65)% 26 + 65;
 	return String.fromCharCode( ...num );
 }
 
@@ -24,10 +24,10 @@ function caesarDecrypt(message) {
 	var num = [];
 		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
 			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) - 1 - 97)% 26 + 97;
+			num[i] = (message.charCodeAt(i) - 13 - 97)% 26 + 97;
 		else if (message.charCodeAt(i) >=65 && message.charCodeAt(i) <=90)
 			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) - 1 - 65)% 26 + 65;
+			num[i] = (message.charCodeAt(i) - 13 - 65)% 26 + 65;
 	return String.fromCharCode( ...num );
 }
 
