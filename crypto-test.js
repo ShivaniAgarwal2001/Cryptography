@@ -9,7 +9,7 @@ function decrypt() {
 }
 
 
-function caesarEncrypt(message) { // add a key to function later or add the shift to mod
+function caesarEncrypt(message) { // add a key to function
 	var num = [];
 		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
 			for(var i = 0; i < message.length; i++)
@@ -34,7 +34,7 @@ function caesarDecrypt(message) {
 function copyOne() {
 const enStr = document.getElementById("encrypted-message");
 enStr.focus(); 
-enStr.select(); // to copy you need to select first
+enStr.select(); 
 document.execCommand("copy");
 }
 
