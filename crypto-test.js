@@ -11,8 +11,7 @@ function decrypt() {
 }
 
 
-function caesarEncrypt(message, shift) {
-	console.log(shift); 
+function caesarEncrypt(message, shift) { 
 	var num = [];
 		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
 			for(var i = 0; i < message.length; i++)
