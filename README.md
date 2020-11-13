@@ -1,1 +1,1 @@
-# Encrption-Website
+# Encryption-Website
