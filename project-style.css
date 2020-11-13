@@ -1,3 +1,9 @@
+h1 {
+	display: block;
+	text-align: center;
+	font-size: 50px;
+}
+
 #flex {
     display: flex;
     justify-content: space-between;
@@ -15,14 +21,4 @@ body {
 }
 
 
-/* .container {
-    height: 100vh;
-    width: 100%;
-    background-image: url('img/bg.png');
-    background-position: center;
-    background-size: cover;
-    padding-left: 5%;
-    padding-right: 5%;
-    box-sizing: border-box;
-    position: absolute;
-} */
+
