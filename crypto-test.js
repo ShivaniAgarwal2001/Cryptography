@@ -12,24 +12,17 @@ function decrypt() {
 
 
 function caesarEncrypt(message, shift) { 
+	shift = shift%26
 	var num = [];
-		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
-			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) + shift - 97)%(26+shift) + 97;
-		else if (message.charCodeAt(i) >=65 && message.charCodeAt(i) <=90)
-			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) + shift - 65)%(26+shift) + 65;
+	for(var i = 0; i < message.length; i++)
+		num[i] = shiftCharEnr(message.charCodeAt(i) , shift);
 	return String.fromCharCode( ...num );
 }
 
-function caesarDecrypt(message, shift) {
+function caesarDecrypt(message, shift) { 
 	var num = [];
-		if (message.charCodeAt(i) >=97 && message.charCodeAt(i) <=122)
-			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) - shift - 97)%(26+shift) + 97;
-		else if (message.charCodeAt(i) >=65 && message.charCodeAt(i) <=90)
-			for(var i = 0; i < message.length; i++)
-			num[i] = (message.charCodeAt(i) - shift - 65)%(26+shift) + 65;
+	for(var i = 0; i < message.length; i++)
+		num[i] = shiftCharEnr(message.charCodeAt(i), 26-shift);
 	return String.fromCharCode( ...num );
 }
 
@@ -47,5 +40,14 @@ function copyTwo() {
 	document.execCommand("copy");
 }
 
+function shiftCharEnr(x , shift) {
+	shift = shift%26
+	if (x<=122 && x>=97)
+		return ((x+shift)-97)%26+97
 
+	else if (x<=90 && x>=65)
+		return ((x+shift)-65)%26+65
 
+	else
+		return x;
+}
