@@ -1,6 +1,6 @@
 function encrypt() {
 	var str = document.getElementById("plain-text").value;
-	var shift = parseInt(document.getElementById("shift").value,10);
+	var shift = parseInt(document.getElementById("shift").value,10); // Typecasted to int
 	document.getElementById("encrypted-message").value = caesarEncrypt(str,shift);
 }
 
@@ -35,17 +35,17 @@ function caesarDecrypt(message, shift) {
 }
 
 function copyOne() {
-const enStr = document.getElementById("encrypted-message");
-enStr.focus(); 
-enStr.select(); // to copy you need to select first
-document.execCommand("copy");
+	const enStr = document.getElementById("encrypted-message");
+	enStr.focus(); 
+	enStr.select(); // to copy you need to select first
+	document.execCommand("copy");
 }
 
 function copyTwo() {
-const enStr = document.getElementById("decrypted-plain-text");
-enStr.focus(); 
-enStr.select(); // to copy you need to select first
-document.execCommand("copy");
+	const enStr = document.getElementById("decrypted-plain-text");
+	enStr.focus(); 
+	enStr.select(); 
+	document.execCommand("copy");
 }
 
 
