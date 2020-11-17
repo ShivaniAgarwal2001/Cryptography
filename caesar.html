@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Caesar</title>
+	<title>test</title>
 	<link rel="stylesheet" type="text/css" href="./caesar.css">
 </head>
 <body>
@@ -9,7 +9,7 @@
 	<div id="flex">
 
 		<label><b>Write Message Here:</b></label>
-		<input id="plain-text" type="text" name="message"> <!-- change type to password -->
+		<textarea id="plain-text" type="text" name="message"></textarea>
 		<br>
 
 
@@ -20,17 +20,17 @@
 		<br>
 
 		<label><b>Encrypted Message</b></label>
-		<input id="encrypted-message" type="text" name="encryptor" readonly="readonly">
+		<textarea id="encrypted-message" type="text" name="encryptor" readonly="readonly"></textarea>
 		<button onclick="copyOne()">Copy</button>
 		<br>
 
 		<label><b>Decrypt Here</b></label>
-		<input id="encrypted-text" type="text" name="encrypted">
+		<textarea id="encrypted-text" type="text" name="encrypted"></textarea>
 		<button onclick="decrypt()">Decrypt</button>
 		<br>
 
 		<label><b>Decrypted Message</b></label>
-		<input id="decrypted-plain-text" type="text" readonly="readonly" name="decrypted">
+		<textarea id="decrypted-plain-text" type="text" readonly="readonly" name="decrypted"></textarea> 
 		<button onclick="copyTwo()">Copy</button>
 
 	</div>
