@@ -202,8 +202,8 @@
     }
     
     .about {
-        background-color: #b4b4b3;
-        height: 100vh;
+        background-color: #e0e0e0;
+        height: 70vh;
     }
     
     .faq {
@@ -296,6 +296,7 @@
     
     .box4 {
         /* display: block; */
+       
         position: reative;
         width: 30%;
     }
