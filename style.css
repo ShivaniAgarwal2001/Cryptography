@@ -60,7 +60,10 @@
         text-align: right;
         padding-right: 10px;
     }
-    
+    .button a {
+        text-decoration: none;
+        color: rgb(245, 246, 247);
+    }
     .btn {
         align-items: center;
         justify-content: center;
