@@ -1,51 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>encryptweb.com</title>
-    <link rel="stylesheet" href="./style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <title>Cryptography</title>
 </head>
 
 <body>
-    <div class="container">
-        <div class="navbar">
-            <img src="img/logo.jpg" class="logo" alt="There was an image!">
-            <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Policy</a></li>
-                    <li><a href="">Contact Us</a></li>
-                </ul>
-            </nav>
+    <nav class="navbar background nav-resp class-resp">
+        <ul class="navlist ">
+            <div class="logo"><img src="img/logo.jpg" alt="logo"></div>
+            <li><a href="">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="">Policy</a></li>
+            <li><a href="#contactus">Contact Us</a></li>
 
-            <!-- <img src="img/bx.jpg" class="box"> -->
+        </ul>
+        <div class="right">
+            <input type="text" name="search" id="search">
+            <button class="btn btn-sm">Search</button>
         </div>
+    </nav>
+    <div class="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+    </div>
+    <section class="background firstSection">
+        <div class="main">
 
+            <div class="firstHalf">
+                <p class="big-text">Want to Encrypt Something?</p>
+                <p class="small-text">You are at the right Place!</p>
+                <div class="button">
+                    <button class="btn"><a href="./project-test.html">Encrypt Word</a> </button>
+                    <button class="btn">Encrypt File</button>
+                </div>
+            </div>
 
-        <div class="content">
-            <h2>Want to Encrypt Something ?</h2>
-            <p>You are at the right Place!</p>
-            <a href="./caesar.html" class="button">
-                <h3>Get Started</h3>
-            </a>
+            <div class="secondHalf gif-resp">
+                <img src="https://media1.giphy.com/media/MFabj1E9mgUsqwVWHu/200w.webp?cid=ecf05e47466npdeabq029wkgjqhf6fvcmjchm4dlr8lq3a2n&rid=200w.webp" alt="Design">
+
+            </div>
         </div>
+        <div class="image">
+            <img src="https://media3.giphy.com/media/kyuOgcQpBUe6Cb6SD6/100.webp?cid=ecf05e47466npdeabq029wkgjqhf6fvcmjchm4dlr8lq3a2n&rid=100.webp" alt="">
+        </div>
+    </section>
 
+    <section class="Section">
+        <div class="Write">
+            <p class="sectionTag big-text">What is Encryption?</p>
+            <p class="sectionSubTag small-text">Encryption is a process that encodes a message or file so that it can be only be read by certain people. Encryption uses an algorithm to scramble, or encrypt, data and then uses a key for the receiving party to unscramble, or decrypt, the
+                information. The message contained in an encrypted message is referred to as plaintext. In its encrypted, unreadable form it is referred to as ciphertext. <br>
+                <br> Basic forms of encryption may be as simple as switching letters. As cryptography advanced, cryptographers added more steps, and decryption became more difficult. Wheels and gears would be combined to create complex encryption systems.
+                Computer algorithms have now replaced mechanical encryption.</p>
+        </div>
+        <div class="gif-resp">
+            <img src="https://thumbs.gfycat.com/PlaintivePastLadybug.webp" alt="" class="imgFluid">
+        </div>
+    </section>
 
+    <section class="Section left">
+        <div>
+            <p class="sectionTag big-text">How are Encryption Keys Generated?</p>
+            <p class="sectionSubTag small-text">Keys are usually generated with random number generators, or computer algorithms that mimic random number generators. <br> A more complex way that computers can create keys is by using user mouse movement to create unique seeds. <br> Modern
+                systems that have forward secrecy involve generating a fresh key for every session, to add another layer of security.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="https://miro.medium.com/max/625/0*jR2uHh4xddtkP_RU.png" alt="" class="imgFluid">
+        </div>
+    </section>
 
+    <section class="Section ">
+        <div class="Write">
+            <p class="sectionTag big-text">Decryption</p>
+            <p class="sectionSubTag small-text">The conversion of encrypted data into its original form is called Decryption. <br> It is generally a reverse process of encryption. <br> It decodes the encrypted information so that an authorized user can only decrypt the data because decryption
+                requires a secret key or password.</p>
+        </div>
+        <div class="thumbnail">
+            <img src="https://source.unsplash.com/400x300/?circuit,key" alt="" class="imgFluid">
+        </div>
+    </section>
 
-    </div>
-    <div class="social">
-        <a href="https://github.com/ShivaniAgarwal2001/Cryptography"><i class="fa fa-github" style="font-size:26px"></i></a>
-        <a href="hat.sh/" style="font-size:20px">hat.sh</a>
-        <a href="geeksforgeeks.org/">GEEKS FOR GEEKS</a>
+    <br><br>
+    <!-- <hr>
+    <hr> -->
 
-    </div>
+    <section class="about">
+        <h2 class="text-center" id="about">About</h2>
+        <p class="faq small-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque inventore ab aliquid quae totam neque deserunt ducimus temporibus exercitationem asperiores architecto, praesentium nemo, incidunt aperiam natus adipisci facilis ut suscipit.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum officiis quasi exercitationem nisi dolores perspiciatis maiores fugiat, quo molestiae omnis harum alias atque magnam. Tempore assumenda a unde? Dolore, soluta?</p>
+        <div class="faq">
+            <p class="sectionTag big-text">FAQ</p>
+            <p class="sectionSubTag small-text">Does Hat.sh log or store any of my data? <br> ->NO, Hat.sh never stores any of your data. The program runs locally in your browser. <br> Is Hat.sh free?<br> ->YES, Hat.sh is free and always will be. However, please consider donating to support
+                the project.<br> How do I use Hat.sh?<br> ->It's very simple, browse for a file, generate a password or type one, click the Encrypt or Decrypt button.<br> Which file types are supported? Is there a file size limit?<br> ->Hat.sh accepts
+                all file types. There's no file size limit, meaning files of any size can be encrypted.<br> Is Hat.sh secure?<br> ->Yes, the app encrypts files using the AES-GCM algorithm provided by the WebCryptoAPI. Everything is done offline in your
+                browser - no data is sent to any server.<br> I forgot my password, can I still decrypt my files?<br> ->NO, we don't know your password. Make sure you remember your password before encrypting any files.<br> How can I contribute?<br> ->Hat.sh
+                is an open-source application. You can help make it better by making commits on GitHub. The project is maintained in my free time. Donations of any size are appreciated.</p>
+        </div>
+    </section>
 
-    <footer>
+    <br><br>
+
+    <section class="contact">
+        <h2 class="text-center" id="contactus">Contact Us</h2>
+        <div class="form">
+            <input type="text" name="name" id="name" placeholder="Enter Your Name">
+            <input type="text" name="phone" id="phone" placeholder="Enter Your Phone">
+            <input type="text" name="email" id="email" placeholder="Enter Your Email">
+            <textarea name="text" id="Suggest" cols="80" rows="10" placeholder="Any Suggestions"></textarea>
+            <button class="btn-dark">Submit</button>
+        </div>
+    </section>
+    <footer class="background">
         <div id="foot">
             <div class="box4">
-                <h2>Pages</h2>
+                <h2 class="box">Content</h2>
                 <hr>
                 <div class="list">
                     <ul>
@@ -59,27 +134,27 @@
             </div>
             <!-- </div> -->
             <div class="box5">
-                <h2>Description</h2>
+                <h2 class="box">About</h2>
                 <hr>
-                <p>This Website will let you know whether the text or file is encrypted in front of you, because most of the applications or website pretend to do encryption but we are not sure of they are safe or not.
+                <p>This Website will let you know whether the text or file is encrypted in front of you, because most of the applications or website pretend to do encryption but we are not sure of it, whether they are safe or not.
                     <br>This website will encrypt as well as decrypt your INPUT text.
                 </p>
             </div>
             <div class="box6">
-                <h2 class="cen">Follow_Us</h2>
+                <h2 class="box">Follow Us</h2>
                 <hr>
-                <div>
-                    <a href="#" class="fa fa-facebook"></a>
-                    <a href="#" class="fa fa-twitter"></a>
-                    <a href="#" class="fa fa-linkedin"></a>
+                <div class="social">
+                    <a href="github.com/"><i class="fa fa-github" style="font-size:20px"></i></a>
+                    <a href="#" class="fa fa-facebook" style="font-size:20px"></a>
+                    <a href="#" class="fa fa-twitter" style="font-size:20px"></a>
+                    <a href="#" class="fa fa-linkedin" style="font-size:20px"></a>
                 </div>
             </div>
         </div>
-        <div class="copyright">
-            Copyright &copy; www.encryptweb.com All rights reserved!
-        </div>
+        <p class="textfooter">
+            CopyRight &copy; 2020 www.encryptweb.com - All rights reserved
+        </p>
     </footer>
 </body>
 
 </html>
- 
