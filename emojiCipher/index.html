@@ -1,0 +1,184 @@
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no">
+<title>EmojiCipher</title>
+<link rel='shortcut icon' type=image/x-icon href=favicon.ico>
+
+<!-- Bootswatch template -->
+<link rel=stylesheet href=css/lumen.min.css>
+
+<!-- custom CSS -->
+<style>
+    body { padding: 50px 0 80px;}
+    body { background-image: url(./images/background.png); background-repeat: no-repeat; background-size: cover; filter: }
+    h4   { border: solid silver 3px; border-radius: 5px; margin-left: 10px; }
+
+    
+    #intro { max-width: 100%; }
+    #intro p { margin-bottom: 0.2rem; }
+    #intro p { padding: 0 1.5rem; }
+    
+    #intro div { text-align: center; margin-top: 2rem; }
+    #intro div a { margin-left: 0.5rem; white-space: nowrap; }
+    #intro div a:first-child { margin-left: 0; }
+    
+    hr { margin-top: 2rem; margin-bottom: 0; }
+    
+    .form-control { line-height: 1.7; }
+    .form { margin-top: 4rem; }
+    
+    .progress { margin-top: 0.4rem; }
+    .progress-bar { -webkit-transition: none; transition: none; }
+    
+    #cost { padding-left: 0.75rem; margin-top: 0.3rem; }
+    #cost div { display: inline-block; padding-left: 1.2rem; }
+    #cost div { margin-left: 0.5rem; white-space: nowrap; }
+    #cost .custom-control-label { font-weight: 400; }
+    
+    #decrypt-out { margin-top: 1rem; display: none; }
+    #decrypt-out span { white-space: pre-wrap; }
+    
+    #decrypt-pw, #encrypt-pw { text-transform: lowercase; }
+</style>
+
+
+
+<body>
+  <div class=container>    
+
+    <!-- header -->
+    <div class=row>
+      <div class=col-auto id=intro>
+        <h1 style="margin-left: 400px; text-align: center; color: yellow; font-size: 52px; text-shadow:  2px 2px #ff0000"><u>AES Emoji Cipher</u></h1>
+        <hr>
+      </div>
+    </div>
+    
+    
+    
+    <div class=row>
+      
+      
+      
+      <!-- Decryption -->
+      <div class='col-lg-6 form'>
+        
+        <!-- Input -->
+        <div class=form-group>
+          <label for=decrypt-in><h4 style="color: white; font-size:25px; background-image: linear-gradient(45deg, #4161a7, #742f8a);">Decrypt your message here</h4></label>
+          <textarea class=form-control id=decrypt-in rows=5
+            placeholder="&#x1f512; Paste encrypted message here..."></textarea>
+        </div>
+        
+        <!-- Password -->
+        <div class=input-group>
+          <input id=decrypt-pw class=form-control type=text placeholder="&#x1f511; Enter or guess the password" autocomplete=off autocorrect=off autocapitalize=off spellcheck=false>
+          
+          <!-- Decrypt button -->
+          <div class=input-group-append>
+            <button id=decrypt class='btn btn-primary' type=button>Decrypt</button>
+          </div>
+          
+        </div>
+        
+        <!-- Progress bar -->
+        <div class=progress>
+          <div id=decrypt-progress class='progress-bar progress-bar-striped' role=progressbar></div>
+        </div>
+        
+        <!-- Output -->
+        <div id=decrypt-out class='alert alert-dismissible alert-primary'>
+          <button id=decrypt-close type=button class=close>&#xd7;</button>
+          <strong>&#x2709; Message:</strong><br>
+          <span></span>
+        </div>
+        
+      </div>
+      
+      
+      
+      <!-- Encryption -->
+      <div class='col-lg-6 form'>
+        
+        <!-- Input -->
+        <div class=form-group>
+          <label for=encrypt-in><h4 style=" color: white; font-size:25px; background-image: linear-gradient(45deg, #4161a7, #742f8a);">Write Your message here</h4></label>
+          <textarea class=form-control id=encrypt-in rows=5 placeholder="Write your message here"></textarea>
+        </div>
+        
+        <!-- Password -->
+        <div class=input-group>
+          <input id=encrypt-pw class=form-control type=text placeholder="&#x1f511; Enter a password" autocomplete=off autocorrect=off autocapitalize=off spellcheck=false>
+          
+          <!-- Encrypt button -->
+          <div class=input-group-append>
+            <button id=encrypt class='btn btn-primary' type=button>Encrypt</button>
+          </div>
+          
+        </div>
+        
+        <!-- Progress bar -->
+        <div class=progress>
+          <div id=encrypt-progress class='progress-bar progress-bar-striped' role=progressbar></div>
+        </div>
+        
+        <!-- Cost -->
+        <div class=form-group id=cost>
+          <label for=cost>Cost:</label>
+          <div class='custom-control custom-radio'>
+            <input type=radio id=L name=cost class=custom-control-input>
+            <label class=custom-control-label for=L>Low</label>
+          </div>
+          <div class='custom-control custom-radio'>
+            <input type=radio id=M name=cost class=custom-control-input checked>
+            <label class=custom-control-label for=M>Med</label>
+          </div>
+          <div class='custom-control custom-radio'>
+            <input type=radio id=H name=cost class=custom-control-input>
+            <label class=custom-control-label for=H>High</label>
+          </div>
+          <div class='custom-control custom-radio'>
+            <input type=radio id=U name=cost class=custom-control-input>
+            <label class=custom-control-label for=U>Ultra</label>
+          </div>
+        </div>
+        
+        <!-- Output -->
+        <div class=input-group>
+          <div class=input-group-prepend>
+            <span class="input-group-text">&#x1f512;</span>
+          </div>
+          <input id=encrypt-out class=form-control readonly type=text>
+          
+          <!-- Copy button -->
+          <div class=input-group-append>
+            <button id=copy class='btn btn-outline-primary' disabled type=button>Copy</button>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+      
+      
+    </div>
+  </div>
+</body>
+
+
+
+<script src=scrypt-js/thirdparty/setImmediate.js></script>
+<script src=scrypt-js/thirdparty/unorm.js></script>
+<script src=scrypt-js/thirdparty/buffer.js></script>
+<script src=scrypt-js/scrypt.js></script>
+<script src=js/emoji256.js></script>
+<script>
+var exports = {};
+var emojis = emoji256;
+</script>
+
+<script src=js/pfrazee-base-emoji.js></script>
+<script src=libemojicrypt/libemojicrypt.js></script>
+<script src=libemojicrypt/protocol.1.js></script>
+<script src=js/app.js></script>
+
+
