@@ -15,13 +15,13 @@ h1 {
 	width: 250px;
 	border: solid silver 4px;
 	border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(255,178,249,0.19), 0 6px 6px rgba(105,255,205,0.23);
-	background-image: url("./background.png")
+    	box-shadow: 0 10px 20px rgba(255,178,249,0.19), 0 6px 6px rgba(105,255,205,0.23);
+	background-image: linear-gradient(#F985D6,#7495dd,#A0AFB7,#fc0fc0);
 
 }
 
 body {
-	background-color: #7f00ff;
+	background-image: url("./background.png");
 }
 
 
